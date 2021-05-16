@@ -13,9 +13,12 @@ h1{
     width: 100px;
 }
 #image-container{
+    float: right;
     display: inline-block;
     border: 5px solid red ;
-    float: right;
+    
+
+
 }
 #image-container img{
     margin: 35px;
