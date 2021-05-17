@@ -13,7 +13,7 @@ let busViews = [];
 let newImg=[];
 function busMallimg(busmallName){
     this.busmallName=busmallName.split('.')[0];
-    this.busmallsource='/img/'+busmallName;
+    this.busmallsource='img/'+busmallName;
     this.clicks=0;
     this.views=0;
   
