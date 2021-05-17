@@ -13,7 +13,7 @@ let busViews = [];
 let newImg=[];
 function busMallimg(busmallName){
     this.busmallName=busmallName.split('.')[0];
-    this.busmallsource='../img/'+busmallName;
+    this.busmallsource='./img/'+busmallName;
     this.clicks=0;
     this.views=0;
   
@@ -54,7 +54,7 @@ function renderImg() {
     liftImg.setAttribute('src',busMall[leftImgIndex].busmallsource);
     liftImg.setAttribute('title', busMall[leftImgIndex].busmallsource);
     busMall[leftImgIndex].views++;
-console.log(busMall[leftImgIndex].busmallsource+"hi");
+
     middleImg.setAttribute('src',busMall[middleImgIndex].busmallsource);
     middleImg.setAttribute('title', busMall[middleImgIndex].busmallsource);
     busMall[middleImgIndex].views++;
