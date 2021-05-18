@@ -11,6 +11,7 @@ let busImagesNames = [];
 let busClicks = [];
 let busViews = [];
 let newImg=[];
+
 function busMallimg(busmallName){
     this.busmallName=busmallName.split('.')[0];
     this.busmallsource='img/'+busmallName;
@@ -85,7 +86,7 @@ function handelClicks(event){
         busMall[rightImgIndex].clicks++;
     }
 
-    renderImg();
+    renderImg();settingItems();
 }else {
   /*  let ulEl = document.getElementById('results');
     let liEl;
@@ -112,7 +113,25 @@ function myFunction() {
         busClicks.push(busMall[i].clicks);
         busViews.push(busMall[i].views);
     } chartRender();
-  }
+  };
+
+   function settingItems(){
+
+     let data =JSON.stringify(busMall);
+
+     localStorage.setItem('bus',data);
+
+};
+function gettingItems() {
+    let stringObject = localStorage.getItem('bus');
+    let normalObject =JSON.parse(stringObject);
+    if (normalObject !== null) {
+        busMall  = normalObj;
+    }
+   // renderImg();
+}
+
+
 
   function chartRender() {
     var ctx = document.getElementById('myChart').getContext('2d');
@@ -151,3 +170,4 @@ function myFunction() {
         }
     });
 }
+gettingItems() ;
