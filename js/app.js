@@ -126,7 +126,7 @@ function gettingItems() {
     let stringObject = localStorage.getItem('bus');
     let normalObject =JSON.parse(stringObject);
     if (normalObject !== null) {
-        busMall  = normalObj;
+        busMall  = normalObject;
     }
    // renderImg();
 }
